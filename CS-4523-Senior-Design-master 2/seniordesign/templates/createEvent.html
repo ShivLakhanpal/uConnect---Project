@@ -1,0 +1,14 @@
+{% extends "base2.html" %}
+
+{% block content%}
+{% load static %}
+
+<h4>Tell us a little bit about your event!</h4>
+
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_ul }}
+    <button type="submit">Submit</button>
+</form>
+
+{% endblock content%}

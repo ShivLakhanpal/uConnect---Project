@@ -1,0 +1,48 @@
+{% extends "base2.html" %}
+
+{% block content %}
+
+{% load static %}
+<div class = "jumbotron" style="padding:0%;">
+  <h2>My Events</h2>
+</div>
+<div class="row">
+  <div class ="col" style="text-align:center">
+      <a href = "/viewEvent">
+    <div class="container fluid">
+        <img src="{% static "seniordesign/poker?,_i_barely_know_er.jpg" %}" height="176px" width="auto">
+    </div>
+     <h7 style="text-align:center;color:blue;">POKER NIGHT</h7> </a>
+  </div>
+
+
+
+  <div class ="col" style="text-align:center">
+      <a href = "/viewEvent2">
+   <div class="container fluid">
+      <img src="{% static "seniordesign/pooliosis.jpg" %}" height="176px" width="176px">
+    </div>
+     <h7 style="text-align:center;color:blue;">Pool & Billiards</h7> </a>
+  </div>
+
+  <div class ="col" style="text-align:center">
+      <a href = "/viewEvent3">
+    <div class="container fluid"> 
+      <img src="{% static "seniordesign/debate.gif" %}" height="176px" width="176px">
+    </div>
+    <h7 style="text-align:center;color:blue;">Master Debating Tournament</h7> </a>
+  </div>
+
+  <div class ="col" style="text-align:center">
+      <a href = "/viewEvent4">
+    <div class="container fluid"> 
+      <img src="{% static "seniordesign/food.jpg" %}" height="176px" width="176px">
+    </div>
+    <h7 style="text-align:center;color:blue;">Free Food, Just take it</h7> </a>
+  </div>
+
+</div>
+
+
+      
+{% endblock content %}

@@ -1,0 +1,27 @@
+{% extends "base2.html" %}
+
+{% block content%}
+{% load static %}
+
+<div class="row" style="margin-top:50px;" >
+    <div style = "text-align: center;width:100%">
+            <img src="{% static "seniordesign/debate.gif" %}" height="206px" width="auto">
+            <hr>
+            <h2>Debate Tournament</h2>
+            <h5>Hosted By: Debate Club Sandwiches</h5>
+            <h5>Location: Williamsburg, Brooklyn, NY</h5>
+            <h5>Distance: 1.1 miles away</h5>
+        <button>
+            <a href = "/homePage">Interested</a>
+        </button>
+        <button>
+            <a href = "/homePage">Going</a>
+        </button>
+        <button>
+            <a href = "/chatapp/chat">Go to Chat</a>
+        </button>
+    </div>
+</div>
+
+
+{% endblock content%}

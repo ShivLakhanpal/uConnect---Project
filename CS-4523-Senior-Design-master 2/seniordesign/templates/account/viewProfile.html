@@ -1,0 +1,34 @@
+{% extends "base2.html" %}
+
+{% block content %}
+
+{% load static %}
+
+<div class="col s12 m8 offset-m2">
+      <div class="card">
+        <div class="card-content">
+        <h2 class="flow-text">Your information</h2>
+        <img src="{% static "seniordesign/profPic.jpg" %}" alt="Profile Pic" align="right" style="width:200px;height:200px;">
+        <div class = "container-fluid">
+         	<h6> Name : {{FirstName}} {{LastName}} </h6>
+    			<h6> Username : {{username}}  </h6> 
+    			<h6> University : {{uni}} </h6> 
+    			<h6> Year : {{year_in_school}} </h6> 
+          <h6> Interests: Computer Science, U•Start, Software Engineering </h6>
+    		</div>
+        </div>
+    </div>
+</div>
+
+
+<br>
+
+<form action="/updateProfile">
+    <input type="submit" value="Edit Profile" />
+</form>
+<br>
+<form action="/">
+    <input type="submit" value="Log Out" />
+</form>
+
+{% endblock content %}

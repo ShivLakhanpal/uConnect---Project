@@ -1,0 +1,113 @@
+{% extends "base2.html" %}
+
+{% block content %}
+
+{% load static %}
+<div class="container">
+    <h2>Events Near You:</h2>
+    <div class="row" style="margin-top:75px;" >
+        {% for event in topEvents %}
+        <div class="col">
+            <div style = "color:#439DBB;text-align: center;">
+                {% if forloop.counter == 1 %}
+                <a class ="main_page" href =  "/viewEvent">
+                <img src = "{% static "seniordesign/poker?,_i_barely_know_er.jpg" %}" height="180px" width="auto">
+                {% endif%}
+                {% if forloop.counter == 2 %}
+                <a class ="main_page" href =  "/viewEvent2">
+                <img src = "{% static "seniordesign/pooliosis.jpg" %}" height="180px" width="auto">
+                {% endif%}
+                {% if forloop.counter == 3 %}
+                <img src = "{% static "seniordesign/gt.jpg" %}" height="180px" width="300px">
+                {% endif%}
+                    <div style = "margin-top:50px;">
+                        <h3>{{event}}</h3>
+                    </div>
+                </a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<!--
+<div class="container">
+        <div class="row" style="margin-top:150px;" >
+            <div class="col">
+                <div style = "color:#439DBB;text-align: center;">
+                    <a class ="main_page" href =  "/viewEvent">
+                    <img src = "{% static "seniordesign/logo.png" %}" height="auto" width="auto">
+                        <div style = "margin-top:50px;">
+                            <h3>Event 1 Near me</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        
+            <div class="col" >
+                <div style = "color:#439DBB;text-align: center;">
+                    <a class ="main_page" href =  "/viewEvent">
+                        <img src = "{% static "seniordesign/logo.PNG" %}" height="auto" width="auto">
+                        <div style = "margin-top:50px;">
+                            <h3>Event 2 Near Me</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col" >
+                <div style = "color:#439DBB;text-align: center;">
+                    <a class ="main_page" href =  "/viewEvent">
+                        <img src = "{% static "seniordesign/logo.png" %}" height="auto" width="auto">
+                        <div style = "margin-top:50px;">
+                            <h3>Event 3 near me</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+-->
+    <div class = "container">
+        <h6>More Events: </h6>
+            <table class="table" style = "background-color:white;">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Distance</th>
+                        <th scope="col">Location</th>
+                        <th scope="col">Event Name</th>
+                        <th scope="col">Hosted By: </th>
+                        <th scope="col">Tags: </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>500 feet away</td>
+                        <td>Tandon Gym</td>
+                        <td>Pickup Basketball</td>
+                        <td>Lucas</td>
+                        <td>basketball sports fun</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>0.1 mi away</td>
+                        <td>Dibner Library</td>
+                        <td>Senior Design Study Session</td>
+                        <td>Red</td>
+                        <td>study computer science academics</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>2.1 mi away</td>
+                        <td>Brooklyn, NY</td>
+                        <td>Bike The Brooklyn Bridge</td>
+                        <td>Farhard</td>
+                        <td>athletics biking outdoors</td>
+                      </tr>
+                    </tbody>
+                  </table>
+    </div>
+
+
+
+{% endblock content %}
